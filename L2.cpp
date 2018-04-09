@@ -30,8 +30,6 @@ double Fy(double y, double r)
 
 void VerletAlgorithm()
 {
-    std::ofstream myData;
-    myData.open("/Users/bartlomiejkos/Documents/Programming/C++/Wprowadzenie do C++/Symulacj komputerowe w fizyce/L2/L2/Ex1.csv", std::ios::out);
     std::vector<double> x;
     std::vector<double> y;
     std::vector<double> vx;
@@ -60,15 +58,11 @@ void VerletAlgorithm()
     for(int i = 0; i < n; i++)
     {
         std::cout << x[i] << '\t' << y[i] << '\t' << vx[i] << '\t' << vy[i] << '\t' << std::endl;
-        myData << x[i] << ',' << y[i] << ',' << vx[i] << ',' << vy[i] << ',' << std::endl;
     }
-    myData.close();
 }
 
 void VerletVelocity()
 {
-    std::ofstream myData;
-    myData.open("/Users/bartlomiejkos/Documents/Programming/C++/Wprowadzenie do C++/Symulacj komputerowe w fizyce/L2/L2/Ex1b.csv", std::ios::out);
     std::vector<double> x;
     std::vector<double> y;
     std::vector<double> vx;
@@ -89,9 +83,7 @@ void VerletVelocity()
     for(int i = 0; i < n; i++)
     {
         std::cout << x[i] << '\t' << y[i] << '\t' << vx[i] << '\t' << vy[i] << '\t' << std::endl;
-        myData << x[i] << ',' << y[i] << ',' << vx[i] << ',' << vy[i] << ',' << std::endl;
     }
-    myData.close();
 }
 
 int main(int argc, const char * argv[])
