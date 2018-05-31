@@ -24,8 +24,6 @@ public:
 public:
     BiVector();
     BiVector(double x, double y);
-    //    void operator+=(const BiVector &in);
-    //    void operator-=(const BiVector &in);
     friend std::ostream &operator<<(std::ostream &F, const BiVector &in);
 
     BiVector operator+=(BiVector &in)

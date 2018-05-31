@@ -109,7 +109,6 @@ double RDF(std::vector<PParticle> &atoms, int num_atoms, double rw)
     }
     avg_pairs = (double)count_pairs / (double)num_atoms;
     result = avg_pairs / (2 * M_PI * rw * drw);
-    //result = avg_pairs / ((num_atoms * (num_atoms - 1)) * 2 * M_PI * rw * drw);
     return result;
 }
 
@@ -137,7 +136,6 @@ int main(int argc, const char * argv[])
     double rw = 0.1;
     while(rw < 4)
     {
-        //std::cout << "liczba par (r) " << rw << " " << RDF(atoms, num_atoms, rw) << std::endl;
         rdfData << rw << ',' << RDF(atoms, num_atoms, rw) << '\n';
         rw += 0.01;
     }
@@ -158,12 +156,10 @@ int main(int argc, const char * argv[])
     double w = 0;
     while(rw < 4)
     {
-        //std::cout << "liczba par (r) " << rw << " " << RDF(atoms, num_atoms, rw) << std::endl;
         rdfData << rw << ',' << RDF(atoms, num_atoms, rw) << '\n';
 
         rw += 0.01;
         w++;
-        //std::cout << w << std::endl;
     }
     for(int i = 0; i < num_atoms; i++)
     {
