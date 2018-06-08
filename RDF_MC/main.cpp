@@ -12,10 +12,6 @@
 
 int main(int argc, const char * argv[])
 {
-
-
-    
-    
     const double T = 2;                            // Some initial data
 //    const double kB = 1.38064852e-23;
 //    const double sigma = 0.34;
